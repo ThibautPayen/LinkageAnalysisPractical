@@ -321,19 +321,10 @@ of these new phase knownmeioses occurring at locus E.
 ------------------------------------------------------------------------
 
 Please continue with the `build, twopoint, flipsn,instant, & fixed`
-options, in\
-[**Part 2** - *Mapping & LODscores*  ](analyse1.html)
+options, in [**Part 2** - *Mapping & LODscores*  ](analyse1.html)
 
 ------------------------------------------------------------------------
 
-[![](Pictures/embticon.gif)](http://teacher.bmc.uu.se/BIOINFO2005/index.html)[![](Pictures/hgmbicon.gif)](http://www.embnet.org/index.html)
-
-------------------------------------------------------------------------
-
-[**Comments? Questions? Accolades?**]{#comments}\
-*Please* talk to your teacher  **( )**
-
-------------------------------------------------------------------------
-
-Updated on Wednesday, 22 January, 2005\
-Copyright
+Copied from http://teacher.bmc.uu.se/CRIMAP/Crimap to adapt for the practical given the 6 of May: 2020 UU-3MR103
+Updated on Wednesday, 22 January, 2005
+Copyright © 1995-1996 by David W. Featherston. Updated for the MacOSX by Erik Bongcam-Rudloff 

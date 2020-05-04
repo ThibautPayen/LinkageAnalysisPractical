@@ -1,52 +1,24 @@
-[![European Molecular Biology Computing Network - Biocomputing
-Tutorials](Pictures/embticon.gif)](http://teacher.bmc.uu.se/BIOINFO2005/index.html)
-[![cri-map\"](Pictures/crimicon.gif)](index-2.html) ![Mapping & LOD
-scores](Pictures/analyse1.gif)
 
 CRI-MAP Tutorial - Mapping & LOD scores
----------------------------------------
 
 ------------------------------------------------------------------------
 
-Other **CRI-MAP tutorial** contents:
+**CRI-MAP tutorial** contents:
 
-[![Manuals](Pictures/manual.gif)](crimanua.html)
 
-[![Manual Table of Contents](Pictures/manuatoc.gif)](manuatoc.html)
+[Manuals: Web & text versions](crimanua.html)
 
-[![Data Sets](Pictures/datasets.gif)](datasets.html)
+[Web Manual Table of Contents](manuatoc.html)
 
-[![Data Formatting](Pictures/datafrmt.gif)](datafrmt.html)
+[ Tutorial Practice Datasets ](datasets.html)
 
-[![Testing & X-overs](Pictures/analyse2.gif)](analyse2.html)
+[Formating data with `prepare`](datafrmt.html)
 
-[![Bibliography & Links](Pictures/biblinks.gif)](biblinks.html)
+[Mapping with `build`](analyse1.html)
 
- 
+[Testing & Extending Maps](analyse2.html)
 
-[Manuals:\
-Web & text\
-versions](crimanua.html)
-
-[Web Manual\
-Table of\
-Contents](manuatoc.html)
-
-[ Tutorial \
- Practice \
- Datasets ](datasets.html)
-
-[Formating\
-data with\
-\"`prepare`\"](datafrmt.html)
-
-[Testing &\
-Extending\
-Maps](analyse2.html)
-
-[Bibliography\
-&\
-Other Links](biblinks.html)
+[Bibliography & Other Links](biblinks.html)
 
 ------------------------------------------------------------------------
 
@@ -603,10 +575,6 @@ restriction endonuclease plus probe combination. Thus, a gene with two
 
 ------------------------------------------------------------------------
 
-[**Comments? Questions? Accolades?**]{#comments}\
-*Please* talk to your teacher   **( )**
-
-------------------------------------------------------------------------
-
-Updated on Wednesday, 22 January, 2005\
-Copyright
+Copied from http://teacher.bmc.uu.se/CRIMAP/Crimap to adapt for the practical given the 6 of May: 2020 UU-3MR103
+Updated on Wednesday, 22 January, 2005
+Copyright © 1995-1996 by David W. Featherston. Updated for the MacOSX by Erik Bongcam-Rudloff 
