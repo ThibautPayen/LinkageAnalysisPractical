@@ -1,49 +1,24 @@
-[](http://teacher.bmc.uu.se/BIOINFO2005/index.html)[![cri-map\"](Pictures/crimicon.gif)](index-2.html)![DataFormatting](Pictures/datafrmt.gif)
 
 CRI-MAP Tutorial - Data File Formatting
----------------------------------------
 
 ------------------------------------------------------------------------
 
 **CRI-MAP tutorial** contents:
 
-[![Manuals](Pictures/manual.gif)](crimanua.html)
 
-[![Manual Table of Contents](Pictures/manuatoc.gif)](manuatoc.html)
+[Manuals: Web & text versions](crimanua.html)
 
-[![Data Sets](Pictures/datasets.gif)](datasets.html)
+[Web Manual Table of Contents](manuatoc.html)
 
-[![Mapping & LOD scores](Pictures/analyse1.gif)](analyse1.html)
+[ Tutorial Practice Datasets ](datasets.html)
 
-[![Testing & X-overs](Pictures/analyse2.gif)](analyse2.html)
+[Formating data with `prepare`](datafrmt.html)
 
-[![Bibliography & Links](Pictures/biblinks.gif)](biblinks.html)
+[Mapping with `build`](analyse1.html)
 
- 
+[Testing & Extending Maps](analyse2.html)
 
-[Manuals:\
-Web & text\
-versions](crimanua.html)
-
-[Web Manual\
-Table of\
-Contents](manuatoc.html)
-
-[ Tutorial \
- Practice \
- Datasets ](datasets.html)
-
-[Mapping\
-with\
-\"`build`\"](analyse1.html)
-
-[Testing &\
-Extending\
-Maps](analyse2.html)
-
-[Bibliography\
-&\
-Other Links](biblinks.html)
+[Bibliography & Other Links](biblinks.html)
 
 ------------------------------------------------------------------------
 
@@ -57,77 +32,82 @@ Other Links](biblinks.html)
 :   [Ex. 3.1](#ex3.1) - merge two `chr#.gen` files
 :   [Ex. 3.2](#ex3.2) - prepare new auxilliary data files
 
-[]{#edgen}
 
 ------------------------------------------------------------------------
 
-### 1. The initial data file - chr**\#**.gen      [(\... & here\'s what themanual says)   ![](Pictures/manualsm.gif)](wwwversn.html#RTFToC29)
+# 1. The initial data file - chr**\#**.gen      [(\... & here\'s what themanual says)   ![](Pictures/manualsm.gif)](wwwversn.html#RTFToC29)
 
-You must supply the initial data file to **CRI-MAP**. It is a
-plain\"ascii\" text file that may be created and edited in almost
-anyword-processing programme. chr**\#**.gendata files always have the
-form:\
+You must supply the initial data file to **CRI-MAP** .
+It is a plain ascii text file.
+chr**\#**.gendata files always have the
+form:
 
 *(Section 1, with info for the entire pedigree collection:)*
 
-    # of families# of locilocus_name1  ln2  ln3 etc.    (NB: locus names have a 15 character limit)
+    # of families
+	# of loci
+	locus_name1  ln2  ln3 etc.    (NB: locus names have a 15 character limit)
 
 *(Section 2, with the pedigrees:)*\
     *(Section 2.1-f, with general info for the first family:)*
 
        family 1 id                (any unique name or number designation)   # of family members
 
-        *(Section 2.1-i, with the data for each individual from the
-first family:)*
+        *(Section 2.1-i, with the data for each individual from the first family:)*
 
-           individual 1 id#   mother's id#   father's id#   sex id#       locus_name1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       individual 2 id#   mother's id#   father's id#   sex id#       ln1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       etc. 
+           individual 1 id#   mother's id#   father's id#   sex id#
+		   locus_name1allele1#  ln1a2#  ln2a1#  ln2a2# etc.
+		   individual 2 id#   mother's id#   father's id#   sex id#
+		   ln1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       etc. 
 
     *(Section 2.2-f, with general info for the second family:)*
 
        family 2 id   # of family members
 
-        *(Section 2.2-i, with the data for each individual from the
-second family:)*
+        *(Section 2.2-i, with the data for each individual from the second family:)*
 
-           individual 1 id#   mother's id#   father's id#   sex id#       locus_name1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       individual 2 id#   mother's id#   father's id#   sex id#       ln1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       etc.    and so on ...
+           individual 1 id#   mother's id#   father's id#   sex id#
+		   locus_name1allele1#  ln1a2#  ln2a1#  ln2a2# etc.
+		   individual 2 id#   mother's id#   father's id#   sex id#
+		   ln1allele1#  ln1a2#  ln2a1#  ln2a2# etc.       etc.
+		   and so on ...
 
-The manual shows [this short genericexample.  
-![](Pictures/manualsm.gif)](wwwversn.html#RTFToCgenex)\
+The manual shows [this short generic example.![](Pictures/manualsm.gif)](wwwversn.html#RTFToCgenex)\
 
-[Points]{#edgenpoints} to note:
+Points to note:
 
 -   locus names are separated by spaces, so any particular locus name
     may NOTcontain a space character
 -   locus names and family names may be any combination of letters,
     punctuation,and/or numbers
--   \"`id#`\"s are integers - ALL alleles must be coded asintegers
+-   `id#`s are integers - ALL alleles must be coded asintegers
 -   for individuals without parents in the pedigree,
-    \"`mother's id#& father's id#`\" are coded as `0`
--   for \"`sex id#`\", female=0 male=1 unknown=3
--   unknown \"`allele#`\"s are coded as `0`
--   for X-linked loci, code the non-existent second alleles in males
-    (for theY-chromosome) with an unused (\"dummy\") allele number
+    `mother's id# & father's id#` are coded as `0`
+-   for `sex id#`, female=0; male=1: unknown=3
+-   unknown `allele#`s are coded as `0`
 
-:   ***Exercise** CRI-MAP [1]{#ex1}: create aninput* chr\#.gen *file*
+:   ***Exercise**: create an input* chr\#.gen *file*
 :   Using this key to map allele names to allele numbers, code the
-    following pair ofpedigrees into an input file for **CRI-MAP**. Use a
-    word processorthat allows file saving in `text` *format. Name
-    thefile* `chr37.gen`.\
+    following pair ofpedigrees into an input file for **CRI-MAP** .
+	Use a word processor that allows file saving in `text` format.
+	Name the file `chr37.gen`.
 
-        Chromosome 37 LociLocus Name     allele (code #)     allele (code #)     allele (code #)     A            a      (1)          A      (2)     B            b      (1)          B      (2)     C            c      (1)          C      (2)          c*     (3)     D            d      (1)          D      (2)          d*     (3)     E            e      (1)          E      (2)
+        Chromosome 37 Loci
+		Locus Name     allele (code #)     allele (code #)     allele (code #)     
+		A            a      (1)          A      (2)     
+		B            b      (1)          B      (2)     
+		C            c      (1)          C      (2)          c*     (3)     
+		D            d      (1)          D      (2)          d*     (3)     
+		E            e      (1)          E      (2)
 
-[Family LMN.3 Chr. 37 Loci ](Pictures/pedigre1.gif)    [  Family OPQ.7
-Chr. 37 Loci](Pictures/pedigre2.gif)\
 
-**NB:** When using your own data, if they are already in thecorrect
-format for analysis by the **Linkage** suite of programmes,you may
-convert them to **CRI-MAP**`chr#.gen` format with the LNKTOCRI utility. 
+[Family LMN.3 Chr. 37 Loci ](Pictures/pedigre1.gif)
+[  Family OPQ.7 Chr. 37 Loci](Pictures/pedigre2.gif)
 
-[]{#auxilliary}
 
 ------------------------------------------------------------------------
 
-### [![](Pictures/manualsm.gif)](wwwversn.html#RTFToC43)2. The auxilliary data files - via the `prepare` option
+### 2. The auxilliary data files - via the `prepare` option
 
 -   chr**\#**.loc
 -   chr**\#**.ord    
@@ -252,7 +232,7 @@ of the data anddetails of the subsequent processing by **CRIMAP**.\
     parametres, theirdefault values, and how they are used by the
     **CRI-MAP** optionsare in the [manual](wwwversn.html#RTFToC31).\
     For now, notice thatthe `chr37.par` file holds the names of the
-    other auxilliary data files,\
+    other auxilliary data files,
     `    dat_file  chr37.dat *    gen_file  chr37.gen *    ord_file  chr37.ord *`tells
     **not** to use the `chr37.ord` file in the subsequent`build` option\
     `    use_ord_file  0 *`\
